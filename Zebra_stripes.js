@@ -1,8 +1,13 @@
-function doValidation() {
+function turnZebra() {
+    let rows = document.querySelectorAll('table tr:nth-child(odd)');
+    rows.forEach((row) => {
+        row.classList.add('zebraStripe');
+    });   
+}
 
-    var els =document.getElementsByTagName("tr")
-    for (var i = 1; i < els.length; i += 2) {
-        els[i].style = "background-color:black; color: white"
-    }
-
-            }
+function removeZebra() {
+    let rows = document.querySelectorAll('table tr:nth-child(odd)');
+    rows.forEach((row) => {
+        row.classList.remove('zebraStripe');
+    });   
+}
